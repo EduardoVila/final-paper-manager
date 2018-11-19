@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,3 +43,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+=======
+# final-paper-manager
+A project designed by Professor Christian from Santa Catarina University to organize the final paper from ungraduated students  
+>>>>>>> a4fe19e9b892212eda0aee577c8608aeadd2e34d
