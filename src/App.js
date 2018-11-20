@@ -3,8 +3,9 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 var app = (
   <div>
-    <Header/>
     <Navbar/>
+    <Header/>
+  
   </div>
 );
 class App extends Component {
