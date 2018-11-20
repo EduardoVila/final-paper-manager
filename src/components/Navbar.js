@@ -69,7 +69,6 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    zIndex: '-100',
     marginLeft: -drawerWidth
   },
   contentShift: {
@@ -85,7 +84,7 @@ class PersistentDrawerLeft extends React.Component {
   state = {
     open: true
   };
-
+ 
   handleDrawerOpen = () => {
     this.setState({ open: true });
   };

@@ -157,7 +157,7 @@ class PrimarySearchAppBar extends React.Component {
           <IconButton color="inherit">
             <AccountCircle />
           </IconButton>
-          <p>Perfil</p>
+          <p>Perfil</p> 
         </MenuItem>
       </Menu>
     );
@@ -166,7 +166,7 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton}  color="inherit" aria-label="Open drawer">
+            <IconButton className={classes.menuButton}  onClick={this.handleDrawerOpen} color="inherit" aria-label="Open drawer">
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
