@@ -166,7 +166,7 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
+            <IconButton className={classes.menuButton}  color="inherit" aria-label="Open drawer">
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
@@ -224,3 +224,13 @@ PrimarySearchAppBar.propTypes = {
 };
 
 export default withStyles(styles)(PrimarySearchAppBar);
+
+/*            <IconButton
+              color="inherit"
+              aria-label="Open drawer"
+              onClick={this.handleDrawerOpen}
+              className={classNames(classes.menuButton, open && classes.hide)}
+            >
+              <MenuIcon />
+            </IconButton>
+*/
