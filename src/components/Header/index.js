@@ -13,13 +13,14 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import './Header.css';
 
 const styles = theme => ({
   root: {
     width: '100%',
+    zIndex:100
   },
   grow: {
     flexGrow: 1,
@@ -125,7 +126,7 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMenuClose}>Meu Perfil</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>Minha Conta</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>Sair</MenuItem>
       </Menu>
     );
 
@@ -136,18 +137,11 @@ class PrimarySearchAppBar extends React.Component {
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
+        className='Header'
       >
         <MenuItem>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Mensagens</p>
-        </MenuItem>
-        <MenuItem>
-          <IconButton color="inherit">
-            <Badge badgeContent={11} color="secondary">
+            <Badge badgeContent={this.props.notification} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
@@ -166,9 +160,18 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton}  onClick={this.handleDrawerOpen} color="inherit" aria-label="Open drawer">
+            
+            <IconButton 
+              className={classes.menuButton}  
+              onClick={this.props.collapseSidebar} 
+              color="inherit" 
+              aria-label="Open drawer"
+            >
+            
               <MenuIcon />
+
             </IconButton>
+            
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               meuTCC
             </Typography>
@@ -186,13 +189,9 @@ class PrimarySearchAppBar extends React.Component {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
+              
               <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton color="inherit">
-                <Badge badgeContent={17} color="secondary">
+                <Badge badgeContent={this.props.notification} color="secondary">
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
@@ -224,13 +223,3 @@ PrimarySearchAppBar.propTypes = {
 };
 
 export default withStyles(styles)(PrimarySearchAppBar);
-
-/*            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
-            </IconButton>
-*/

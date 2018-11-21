@@ -1,0 +1,10 @@
+.Content{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 3rem;
+    width: 30rem;
+    background-color: red;
+    height: 30rem;
+    z-index: -2;
+}
