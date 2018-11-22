@@ -18,9 +18,9 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import './Header.css';
 
 const styles = theme => ({
-  root: {
+  header: {
     width: '100%',
-    zIndex:100
+    zIndex:10000
   },
   grow: {
     flexGrow: 1,
@@ -157,7 +157,7 @@ class PrimarySearchAppBar extends React.Component {
     );
 
     return (
-      <div className={classes.root}>
+      <div className={classes.header}>
         <AppBar position="static">
           <Toolbar>
             

@@ -1,10 +1,9 @@
 .Content{
-    width: 100%;
-    margin: 0 auto;
+    margin: 0 auto auto 15%;
     margin-top: 2rem;
-    padding: 3rem;
-    width: 30rem;
-    background-color: red;
+    padding: 4rem;
+    width: 80%;
     height: 30rem;
-    z-index: -2;
+    z-index: -10 ;
+    display: flex;
 }

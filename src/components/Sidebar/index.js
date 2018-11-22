@@ -15,9 +15,11 @@ import './Sidebar.css';
 const drawerWidth = 260;
 
 const styles = theme => ({
-  root: {
+  sideBar: {
     display: "flex",
+    zIndex: -1
   },
+
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
@@ -83,7 +85,7 @@ class PersistentDrawerLeft extends React.Component {
     const { classes } = this.props;
     
     return (
-      <div className={classes.root}>
+      <div className={classes.sideBar}>
         <CssBaseline />
         <Drawer
           className="sideBar"
