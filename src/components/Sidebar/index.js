@@ -108,6 +108,9 @@ class PersistentDrawerLeft extends React.Component {
             ))}
           </List>
         </Drawer>
+        <main>
+          {this.props.children}
+        </main>
       </div>
     );
   }

@@ -29,19 +29,11 @@ class Layout extends React.Component{
                     collapseSidebar={this.sidebarHandler}
                     notification={this.state.notification.count}
                     />  
-                    <nav>
-                            <Sidebar collapsed={this.state.sideBar.open} />
-                        {this.props.children}
-                        
-                    </nav>     
-                    <main>
-                         <Content InfoAluno/>
-                    
-                    </main>
-
-                 
-                   
-                    
+                    <Sidebar collapsed={this.state.sideBar.open}>
+                        <Content>
+                            <InfoAluno/>
+                        </Content>
+                    </Sidebar>  
                 </div>
                     
             </div>
