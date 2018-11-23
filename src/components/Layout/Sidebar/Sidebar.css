@@ -1,0 +1,32 @@
+.Sidebar {
+    min-width: 15rem;
+}
+
+.Profile {
+    display       : flex      ;
+    flex-direction: column    ;
+    flex-wrap     : wrap      ;
+    align-items   : center    ;
+    padding       : 2rem .5rem;
+}
+
+.Profile-picture {
+    width : 6rem!important;
+    height: 6rem!important;
+   
+}
+
+.Profile-name {
+    margin: 1rem 0 .5rem!important;
+    letter-spacing: .1rem;
+}
+
+.Profile-email {
+    letter-spacing: .1rem;
+}
+
+.MuiPaper-elevation16-38{
+    background-color: rgba(255,255,255,0.9) !important;
+    display: none;
+
+}
