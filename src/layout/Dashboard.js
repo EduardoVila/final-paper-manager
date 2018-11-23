@@ -1,12 +1,30 @@
-import React  from 'react';
+import React   from 'react';
 import Sidebar from '../components/Layout/Sidebar';
+
 import Header from '../components/Layout/Header'  ;
-import Tcc from '../components/Tcc';
+
 class Dashboard extends React.Component{
     state = {
         sidebar:{
             collapsed: false,
-            items : ['Página inicial', 'Banca', 'TCC', 'Atualizar Dados']
+            paginas : [
+                {
+                    label: 'Página inicial',
+                    url: '/'
+                },
+                {
+                    label: 'Banca',
+                    url: '/banca'
+                },
+                {
+                    label: 'TCC',
+                    url: '/tcc'
+                },
+                {
+                    label: 'Atualizar Dados',
+                    url: '/perfil'
+                }
+            ]
         },
         user: {
             notification: 70,
@@ -16,17 +34,20 @@ class Dashboard extends React.Component{
         },
         calendar:{
 
-        }
+        },
+        tarefas: ['Cadastrar TCC', 'Indicar Orientador', 'Definir Tema do TCC']
     }
 
     toggleDrawer = () => {
+        let stateObj = this.state.sidebar
+
+        stateObj.collapsed = !this.state.sidebar.collapsed
+
         this.setState({
-            sidebar: {
-                collapsed: !this.state.sidebar.collapsed,
-                items: this.state.sidebar.items
-            }
+            sidebar: stateObj
         });
     };
+    
     render(){
         return(
             <div>
@@ -40,9 +61,11 @@ class Dashboard extends React.Component{
                     profilePicture={this.state.user.picture} 
                     profileName={this.state.user.name}
                     profileEmail={this.state.user.email}
-                    menu={this.state.sidebar.items}
+                    menu={this.state.sidebar.paginas}
                 />
-                <Tcc></Tcc>
+
+                {this.props.children}
+
             </div>
         );
     }

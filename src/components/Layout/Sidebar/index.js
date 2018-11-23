@@ -7,6 +7,7 @@ import List         from '@material-ui/core/List';
 import ListItem     from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography   from '@material-ui/core/Typography';
+import { Link }     from 'react-router-dom'
 
 import './Sidebar.css';
 
@@ -40,16 +41,17 @@ const TemporaryDrawer = (props) => {
           </Typography>
 
         </div>
-        <div className="lala" >
-                  <Divider />
+        <Divider />
+        
         <List>
-          {props.menu.map((text, index) => (
-            <ListItem button key={index}>
-              <ListItemText primary={text} />
-            </ListItem>
+          {props.menu.map((element, index) => (
+            <Link to={element.url}>
+              <ListItem button key={index}>
+                <ListItemText primary={element.label} />
+              </ListItem>
+            </Link>
           ))}
         </List>
-        </div>
 
       </Drawer>
     
