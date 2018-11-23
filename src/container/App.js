@@ -6,6 +6,8 @@ import FinalPaper  from '../views/FinalPaper'
 import Home        from '../views/Home'
 import Profile     from '../views/Profile'
 
+import './App.css'
+
 class App extends Component {
 
   render() {

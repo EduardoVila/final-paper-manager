@@ -1,7 +1,8 @@
-import React   from 'react';
-import Sidebar from '../components/Layout/Sidebar';
+import React   from 'react'
 
-import Header from '../components/Layout/Header'  ;
+import Sidebar from '../components/Layout/Sidebar'
+import Header  from '../components/Layout/Header' 
+import Grid    from '../components/Layout/Grid'
 
 class Dashboard extends React.Component{
     state = {
@@ -26,15 +27,18 @@ class Dashboard extends React.Component{
                 }
             ]
         },
+
         user: {
             notification: 70,
             picture: 'https://pmcdeadline2.files.wordpress.com/2018/09/trump1.jpg?w=446&h=299&crop=1',
             name: 'Donaldzinho',
             email: 'aloca@usa.com'
         },
+
         calendar:{
 
         },
+
         tarefas: ['Cadastrar TCC', 'Indicar Orientador', 'Definir Tema do TCC']
     }
 
@@ -47,7 +51,7 @@ class Dashboard extends React.Component{
             sidebar: stateObj
         });
     };
-    
+
     render(){
         return(
             <div>
@@ -63,8 +67,9 @@ class Dashboard extends React.Component{
                     profileEmail={this.state.user.email}
                     menu={this.state.sidebar.paginas}
                 />
-
-                {this.props.children}
+                <Grid>
+                    {this.props.children}
+                </Grid>
 
             </div>
         );

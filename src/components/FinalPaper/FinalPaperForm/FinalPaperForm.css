@@ -1,0 +1,14 @@
+.FinalPaperForm {
+    padding: 1rem 2rem;
+}
+
+.FinalPaperForm-twoColumns {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.FinalPaperForm-control {
+    min-width: 25rem!important;
+}
