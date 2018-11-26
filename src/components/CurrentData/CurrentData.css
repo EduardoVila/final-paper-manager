@@ -1,17 +1,18 @@
 .rightIcon{
     margin-left: 1rem;
 }
-.DadosUsu {
+.CurrentData {
     padding: 1rem 2rem;
     margin-top: 4rem;
+    height: 30.5rem;
 }
-.DadosUsu-twoColumns {
+.CurrentData-twoColumns {
     display: flex;
     justify-content: space-between;
     margin: 1rem 0;
 
 }
 
-.DadosUsu-control {
+.CurrentData-control {
     min-width: 25rem!important;
 }

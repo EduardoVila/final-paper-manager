@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 
 import Dashboard from '../layout/Dashboard'
 import Grid      from '@material-ui/core/Grid'
-import Paper     from '@material-ui/core/Paper'
+import DadosUsu from '../components/DadosUsu'
+import CurrentData from '../components/CurrentData'
 
 class Profile extends Component {
     render() {
@@ -10,10 +11,10 @@ class Profile extends Component {
             <Dashboard>
                 
                 <Grid item xs={12} md={6}>
-                    <Paper>Profile's update form</Paper>
+                    <DadosUsu/>              
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Paper>Actual Profile</Paper>
+                    <CurrentData/>
                 </Grid>
 
             </Dashboard>

@@ -91,7 +91,7 @@ const FinalPaperForm = (props) => (
         </Button>
         
         <Button variant="contained" color="primary" >
-          Submeter  
+          Enviar  
         </Button> 
 
       </FormGroup>

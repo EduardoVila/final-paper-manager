@@ -5,7 +5,7 @@ import Paper           from '@material-ui/core/Paper'
 import TextField       from '@material-ui/core/TextField'
 import Typograph       from '@material-ui/core/Typography'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import './Dadosusu.css'
+import './CurrentData.css'
 
 /*
   saveData = event => {
@@ -27,23 +27,23 @@ import './Dadosusu.css'
     });
   };
 */
-const DadosUsu = (props) => (
+const CurrentData = (props) => (
   
   <Paper
     elevation={9}
   >
     <form 
-      className='DadosUsu'
+      className='CurrentData'
       autoComplete='off' 
     >
       <FormGroup row>
         <Typograph 
           variant='display1'
         >
-          Atualizar Dados
+          Meus Dados
         </Typograph>
       </FormGroup>  
-      <FormGroup row className='DadosUsu-twoColumns'>
+      <FormGroup row className='CurrentData-twoColumns'>
       <TextField
             id="standard-name"
             label="Nome"
@@ -52,7 +52,6 @@ const DadosUsu = (props) => (
             //onChange={this.nameChange("name")}
             margin="normal"
             fullWidth='true'
-            required='true'
           />
           <TextField
             id="standard-uncontrolled"
@@ -62,7 +61,6 @@ const DadosUsu = (props) => (
             className={'textField'}
             margin="normal"
             fullWidth='true'
-            required='true'
           />
           <TextField
             id="standard-email-input"
@@ -72,7 +70,6 @@ const DadosUsu = (props) => (
             className={'textField'}
             margin="normal"
             fullWidth='true'
-            required='true'
           />
           <TextField
             id="standard-password-input"
@@ -84,7 +81,6 @@ const DadosUsu = (props) => (
             autoComplete="current-password"
             margin="normal"
             fullWidth='true'
-            required='true'
           />
           <TextField
             id="standard-new-password-input"
@@ -96,18 +92,13 @@ const DadosUsu = (props) => (
             autoComplete="current-password"
             margin="normal"
             fullWidth='true'
-            required='true'
           />
       </FormGroup>
-      <FormGroup row className='DadosUsu-twoColumns'>
-      <Button variant="contained" color="primary" /*onClick={this.saveData}*/>
-          Salvar Dados
-          <CloudUploadIcon className={'rightIcon'} />
-        </Button> 
+      <FormGroup row className='CurrentData-twoColumns'>
       </FormGroup>
     </form>
   </Paper>
 
 )
 
-export default DadosUsu;
+export default CurrentData;
