@@ -4,9 +4,13 @@ import Dashboard      from '../layout/Dashboard'
 import Grid           from '@material-ui/core/Grid'
 import Paper          from '@material-ui/core/Paper'
 import FinalPaperForm from '../components/FinalPaper/FinalPaperForm'
+import UploadTCC from '../components/UploadTCC'
 
 class FinalPaper extends Component {
     state = {
+        lala:{
+            collapsed: true,
+        },
         name:      '',
         sobrenome: '',
         senha:     '',
@@ -45,7 +49,9 @@ class FinalPaper extends Component {
                 <Grid item xs={12} md={6}>
                     <Paper>Final's paper rendered</Paper>
                 </Grid>
-                
+                <Grid item xs={12} md={6}>
+                    <UploadTCC collapsed={this.state.lala.collapsed}  ></UploadTCC>
+                </Grid>
             </Dashboard>
         );
     }

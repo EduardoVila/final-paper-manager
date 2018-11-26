@@ -4,8 +4,8 @@ import Dashboard from '../layout/Dashboard'
 import Grid      from '@material-ui/core/Grid'
 import DadosUsu from '../components/DadosUsu'
 import CurrentData from '../components/CurrentData'
-
 class Profile extends Component {
+    
     render() {
         return (
             <Dashboard>
@@ -16,7 +16,6 @@ class Profile extends Component {
                 <Grid item xs={12} md={6}>
                     <CurrentData/>
                 </Grid>
-
             </Dashboard>
         );
     }

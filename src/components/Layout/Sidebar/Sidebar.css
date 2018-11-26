@@ -3,11 +3,12 @@
 }
 
 .Profile {
-    display       : flex      ;
-    flex-direction: column    ;
-    flex-wrap     : wrap      ;
-    align-items   : center    ;
-    padding       : 2rem .5rem;
+    display        : flex      ;
+    flex-direction : column    ;
+    flex-wrap      : wrap      ;
+    align-items    : center    ;
+    padding        : 2rem .5rem;
+    text-decoration: none      ; 
 }
 
 .Profile-picture {
