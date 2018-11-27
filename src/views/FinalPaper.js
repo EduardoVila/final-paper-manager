@@ -4,18 +4,37 @@ import Dashboard      from '../layout/Dashboard'
 import Grid           from '@material-ui/core/Grid'
 import Paper          from '@material-ui/core/Paper'
 import FinalPaperForm from '../components/FinalPaper/FinalPaperForm'
-import UploadTCC from '../components/UploadTCC'
-
+import Modal          from '../components/Modal'
+import UploadInput    from '../components/FinalPaper/FinalPaperUpload'
 class FinalPaper extends Component {
     state = {
-        lala:{
-            collapsed: true,
+        student: {
+            name:      '',
+            sobrenome: '',
+            senha:     '',
+            email:     '',
+            resenha:   '',
+            tcc: ''
         },
-        name:      '',
-        sobrenome: '',
-        senha:     '',
-        email:     '',
-        Resenha:   ''
+        modal: {
+            visible: false
+        }
+    }
+
+    openModalHandler = () => {
+        let currentState = this.state.modal
+        currentState.visible = true
+        this.setState({
+            modal: currentState
+        })
+    }
+
+    closeModalHandler = () => {
+        let currentState = this.state.modal
+        currentState.visible = false
+        this.setState({
+            modal: currentState
+        })
     }
 
     saveData = event => {
@@ -27,6 +46,7 @@ class FinalPaper extends Component {
           [name]: event.target.value,
         });
     };
+
     sobrenomeChange = sobrenome => event => {
         this.setState({
           [sobrenome]: event.target.value,
@@ -39,19 +59,52 @@ class FinalPaper extends Component {
         });
     };
 
+    uploadHandler = (e) => {
+        let reader = new FileReader();
+        let files = e.target.files[0];
+        let currentValue = this.state.student;
+        
+        currentValue.tcc = files.name;
+        this.setState({
+            student: currentValue
+        })
+
+        //console.warn("olha o arquivinho",files);
+        
+        reader.readAsDataURL(files);
+
+        reader.onload = (e)=>{
+            //console.warn("img data",e.target.result)
+        }
+    }
+
     render() {
         return (
             <Dashboard>
 
                 <Grid item xs={12} md={6}>
-                    <FinalPaperForm />
+                    <FinalPaperForm
+                        plusButton={this.openModalHandler}
+                        submitButton={this.openModalHandler}
+                    />
                 </Grid>
+                
                 <Grid item xs={12} md={6}>
                     <Paper>Final's paper rendered</Paper>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <UploadTCC collapsed={this.state.lala.collapsed}  ></UploadTCC>
-                </Grid>
+                
+                <Modal
+                    visible={this.state.modal.visible}
+                    title="Uplode do TCC"
+                    btnLeft="Cancelar"
+                    btnRight="Enviar"
+                    btnLeftFunction={this.closeModalHandler}
+                >
+                    <UploadInput
+                        imageValue={this.state.student.tcc}
+                        onChange={this.uploadHandler}
+                    />
+                </Modal>
             </Dashboard>
         );
     }

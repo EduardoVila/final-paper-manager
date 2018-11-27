@@ -34,8 +34,8 @@ const FinalPaperForm = (props) => (
       <TextField
         label='Título'
         margin='normal'
-        fullWidth='true'
-        required='true'
+        fullWidth={true}
+        required={true}
       />
         
       <FormGroup row className='FinalPaperForm-twoColumns'>
@@ -50,12 +50,6 @@ const FinalPaperForm = (props) => (
               id: 'orientador-required',
             }}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
             <MenuItem value={30}>Thirty</MenuItem>
           </Select>
           <FormHelperText>Obrigatório</FormHelperText>
@@ -71,13 +65,6 @@ const FinalPaperForm = (props) => (
               id: 'coorientador-required',
             }}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
           </Select>
           <FormHelperText>Obrigatório</FormHelperText>
         </FormControl>
@@ -85,11 +72,20 @@ const FinalPaperForm = (props) => (
       </FormGroup>
 
       <FormGroup row className='FinalPaperForm-twoColumns'>
-        <Button variant="fab" color="secondary" aria-label="Add">
+        <Button 
+          variant="fab" 
+          color="secondary" 
+          aria-label="Add"
+          onClick={props.plusButton}
+        >
             <AddIcon />
         </Button>
         
-        <Button variant="contained" color="primary" >
+        <Button 
+          variant="contained" 
+          color="primary" 
+          onClick={props.submitButton}
+        >
           Enviar  
         </Button> 
 

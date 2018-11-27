@@ -45,8 +45,8 @@ const TemporaryDrawer = (props) => {
         
         <List>
           {props.menu.map((element, index) => (
-            <Link to={element.url}>
-              <ListItem button key={index}>
+            <Link to={element.url} key={index}>
+              <ListItem button>
                 <ListItemText primary={element.label} />
               </ListItem>
             </Link>

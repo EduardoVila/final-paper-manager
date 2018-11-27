@@ -1,10 +1,8 @@
 import React from "react"
-import Button          from '@material-ui/core/Button'
 import FormGroup       from '@material-ui/core/FormGroup'
 import Paper           from '@material-ui/core/Paper'
 import TextField       from '@material-ui/core/TextField'
 import Typograph       from '@material-ui/core/Typography'
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import './CurrentData.css'
 
 /*
