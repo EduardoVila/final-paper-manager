@@ -95,7 +95,7 @@ class FinalPaper extends Component {
                 
                 <Modal
                     visible={this.state.modal.visible}
-                    title="Uplode do TCC"
+                    title="Upload do TCC"
                     btnLeft="Cancelar"
                     btnRight="Enviar"
                     btnLeftFunction={this.closeModalHandler}
