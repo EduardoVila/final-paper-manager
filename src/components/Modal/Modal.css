@@ -1,0 +1,9 @@
+body {
+	font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+}
+
+#alert-dialog-slide-title{
+  width: 25rem;
+  height: 2rem;
+}
