@@ -1,0 +1,9 @@
+.renderedPDF{
+    width     : 100%   ; 
+    min-height: 25rem;
+}
+.paper-1{
+    margin-top: 0.1rem        ;
+    padding   : 1rem 2rem 3rem;
+    max-height: 28.5rem       ;
+}

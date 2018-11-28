@@ -1,7 +1,7 @@
 .paper{
-    padding: 1rem 2rem 3rem;
-    margin-top: 4rem;
-    max-height: 28.5rem;
+    padding   : 1rem 2rem 3rem;
+    margin-top: 4rem          ;
+    max-height: 28.5rem       ;
 }
 .title{
     margin-bottom: 2rem !important;

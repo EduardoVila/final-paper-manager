@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 
 import Dashboard      from '../layout/Dashboard'
 import Grid           from '@material-ui/core/Grid'
-import Paper          from '@material-ui/core/Paper'
 import FinalPaperForm from '../components/FinalPaper/FinalPaperForm'
 import Modal          from '../components/Modal'
 import UploadInput    from '../components/FinalPaper/FinalPaperUpload'
+import RenderedPDF from '../components/RenderedPDF'
 class FinalPaper extends Component {
     state = {
         student: {
@@ -18,8 +18,12 @@ class FinalPaper extends Component {
         },
         modal: {
             visible: false
+        },
+        TCC:{
+            title: 'Meu TCC',
+            pdfURL:'./lala.pdf'
         }
-    }
+    };
 
     openModalHandler = () => {
         let currentState = this.state.modal
@@ -27,7 +31,7 @@ class FinalPaper extends Component {
         this.setState({
             modal: currentState
         })
-    }
+    };
 
     closeModalHandler = () => {
         let currentState = this.state.modal
@@ -35,7 +39,7 @@ class FinalPaper extends Component {
         this.setState({
             modal: currentState
         })
-    }
+    };
 
     saveData = event => {
         console.log(this.state);
@@ -76,7 +80,7 @@ class FinalPaper extends Component {
         reader.onload = (e)=>{
             //console.warn("img data",e.target.result)
         }
-    }
+    };
 
     render() {
         return (
@@ -90,7 +94,7 @@ class FinalPaper extends Component {
                 </Grid>
                 
                 <Grid item xs={12} md={6}>
-                    <Paper>Final's paper rendered</Paper>
+                    <RenderedPDF {...this.state.TCC}></RenderedPDF>
                 </Grid>
                 
                 <Modal
@@ -109,6 +113,6 @@ class FinalPaper extends Component {
         );
     }
 
-}
+};
   
 export default FinalPaper;

@@ -24,7 +24,7 @@ const FinalPaperForm = (props) => (
     >
 
       <FormGroup row>
-        <Typograph 
+        <Typograph className="title"
           variant='display1'
         >
           Cadastro de TCC
