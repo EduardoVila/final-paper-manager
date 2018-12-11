@@ -1,0 +1,21 @@
+.DadosBanca {
+    padding: 2rem 2rem;
+    min-height: 20.5rem;
+    margin-top: 3.7rem;
+    display: fixed;
+}
+
+.DadosBanca-twoColumns {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0rem 1rem;
+
+}
+
+.DadosBanca-control {
+    min-width: 100%!important;
+    margin-bottom: 1rem!important;
+}
+.bancaDate{
+    width: 50%;
+}
