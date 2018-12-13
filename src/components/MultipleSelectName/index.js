@@ -39,39 +39,8 @@ const MenuProps = {
   },
 };
 
-const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
-
-function getStyles(name, that) {
-  return {
-    fontWeight:
-      that.state.name.indexOf(name) === -1
-        ? that.props.theme.typography.fontWeightRegular
-        : that.props.theme.typography.fontWeightMedium,
-  };
-}
-
 class MultipleSelect extends React.Component {
-  state = {
-    name: [],
-  };
-
-  handleChange = event => {
-    this.setState({ name: event.target.value });
-  };
-
-
-
+  
   render() {
     const { classes } = this.props;
 
@@ -81,13 +50,13 @@ class MultipleSelect extends React.Component {
           <InputLabel htmlFor="select-multiple">Participantes da Banca</InputLabel>
           <Select
             multiple
-            value={this.state.name}
-            onChange={this.handleChange}
+            value={this.props.nameList}
+            onChange={(event) => this.props.handleChange(event)}
             input={<Input id="select-multiple" />}
             MenuProps={MenuProps}
           >
-            {names.map(name => (
-              <MenuItem key={name} value={name} style={getStyles(name, this)}>
+            {this.props.names.map(name => (
+              <MenuItem key={name} value={name} >
                 {name}
               </MenuItem>
             ))}

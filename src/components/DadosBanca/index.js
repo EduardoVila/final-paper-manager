@@ -75,7 +75,11 @@ const DadosBanca = (props) => (
         }}
       />
       </FormGroup>
-        <MultipleSelectName/>
+      <MultipleSelectName
+        names={props.usersAvailable}
+        nameList={props.nameList}
+        handleChange={props.handleChange}
+      />
       <FormGroup row className='DadosBanca-twoColumns'>
         <Button 
           variant="contained" 
