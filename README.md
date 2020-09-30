@@ -43,4 +43,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 # final-paper-manager
-A project designed by Professor Christian from Santa Catarina University to organize the final paper from ungraduated students  
+A project designed by Teacher Christian from Santa Catarina University to organize the final paper from ungraduated students  
